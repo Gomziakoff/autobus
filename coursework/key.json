@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "coursework-ai-23",
+  "private_key_id": "0e76fe5ecbb2c587272f08f42ec3cbde9f798b87",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC8ZT3DOTGTUbfV\nOIUdOb8/paWR9SXAtlHpUQqt+p+KpdTYlWfuGw12apJ3o7UPu5pADVwYQeA7lVm8\nee3Ub+VgoGwluUHNMlYOAX8bMew99F2aneClBrfQhB2qYq9naXR2Zl6SUH9RAY+z\nDbwMjvyq9kpwlgK41Z7JrY06Saqhq74yp6ZtEcvlRvCrZL7U1ZwlO5yBcvc5B8GT\nMLidTEYGEj/2ff3lkb0bvsaJK9NTIng/xqWokoQi7OtyocrjCSQp4dP6fvesf+2X\nkkk8psgv2lH+DYPFKebu7P5fKmZwHzPggtv8LRU6GycVCl6okGBfz4/bK0uEuSk4\nE3gETeuVAgMBAAECggEAGMe3TUGtXeuKguL9jVfOalSDN/TXG6dPlGEaxsIXsKC5\n46gZRMYtqeUAMXjoxLJAKosnUTB/Ck9Nf59JE1+JfAF14CtjNpaXn51+Rsk1Afwt\nwLvh88rzrBtonIQA/tjt3vH9oACzEmhiaqKUmNFI9kLRjUgKAR5mFbB8ik1swnlu\n23te19/MoIwxatqRss7o290aZb1voRZVqfEFvixs/CjX1Z11lMw/w6nvwLgehIkd\nGCGZmKGXBChMIZ7GgOGmU4ggsG5roRgRXXrqD5cxgdRonViuFHSZ75i3Y7UBkx2I\njrJPgKg2R205nJZgofl1wF42cbX8BzPMU/Uo+IzX4QKBgQDvp5EcrNcm7tN+PnsN\nI1zRbA5OdmrXMmoyfFHKmEPSJUEa68wjmbnyLH343aEdUBnwFMBZPHZJi2BGCx4A\nZyOyZXh7SiSmQubjWN0YoqdxxfmEODijUDdvCJYoccaxiQ+XPL9fDpflBLuJY4un\ngqzCF1UYLBRlKy+i2xgzqjyStQKBgQDJPq1PZTtOHAQoFXBx7cyUFi7sTGLVJnl7\n3emycrNwVZAhLMdc3HXETL4MN0Hx7e3pYg5F4cnfj8+xzE+Z8FA7Ac4Ym3jh4/Xn\nxarRGB1+Eu0jKRCBEHuEqAlmWT011pF3b83n6hCNvn6FxSex9neFImongL+kM06L\ncPnIxE0hYQKBgQC/5aBXorqg7Smic+taKM/AzVJjV4TTjgXlKRDhNa1Qzw3jvZ33\nf7eaCDBSnzzMWQB78lHW4ogg+Z58V5iNYAkAZynjJwpTq0xwDQ71FAEaJBlY2x/W\n/Xt1yB1cg0ZDkGlQg48FUY0lD/YO3AvOdN9ahw5XTayDGeKJ9//YFt9r5QKBgHMi\n19b/zOFQaBRix7V23r+uvWPWBAl8/K4gdU7yDrVrTo2cZ+c5/mqzmVu11ZXLkX0f\n65iRqISua56GjNg+xDguPTKY6J0cZhkXXzZHvL/fpiqimN2uh2yLEu2qirmdrBYQ\nMlbH9HaUESEJfj90CkdyPBejsoEIFZzzowT5QkOhAoGAJbsHK0UvR5PvIUFV8xSt\nZn1KooBvyiCM4gf5cgy9SyDomvNM/D+oiMlKG58iTXquDywdLDlfM+mZcb/ZZkrJ\nq2PLBYjY/S0wchKe/BsWXDt1zIkweLHw5BCHx1thDCM0YezHqY8TlBzC0lJZ0T+T\nVYhTnu9XtmYStPnd3RJ19hc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "coursework-key@coursework-ai-23.iam.gserviceaccount.com",
+  "client_id": "101744290754768089708",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/coursework-key%40coursework-ai-23.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
