@@ -1,5 +1,5 @@
 @echo off
-REM Запуск установки библиотек
+REM Запуск другого установка библиотек
 pip install -r requirements.txt > nul
 
 REM Запуск Python скрипта
