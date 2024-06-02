@@ -122,9 +122,14 @@ def split_csv():
         pass
     print(combined_df)
     combined_df.to_csv(upload_folder_path+'data.csv', index=False)
-    # for data in combined_df['время начала фиксации (глобальное)']:
-    #     get_weather(data)
-    upload_file('1uaUSsETcJ4K93xingfVuDTwzdGNkppmf','data.csv',upload_folder_path+'data.csv')
+
+    with open('folders_id.csv', 'r', newline='') as csvfile:
+        csvreader = csv.reader(csvfile)
+        next(csvreader)
+        for row in csvreader:
+            upload_id = row[0]
+
+    upload_file(upload_id,'data.csv',upload_folder_path+'data.csv')
 
 #print(get_files_by_mimetype_google_folder('image/jpeg',"1OEon_6lH94B6TupvVeicEwf8cc1vEIfL"))
 download_all_csv(get_ids())
