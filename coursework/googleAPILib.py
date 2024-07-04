@@ -29,7 +29,9 @@ def upload_file(folder_id:str,name:str,file_path:str) -> None:
             return
         else:
             print(f"An error occurred: {err}")
+            print()
             print(f"maybe id:{folder_id} doesn't exist")
+            print()
             return
     except FileNotFoundError as err:
         print(err)
@@ -50,7 +52,9 @@ def get_folder_name(folder_id:str) -> str or None:
             return
         else:
             print(f"An error occurred: {err}")
+            print()
             print(f"maybe id:{folder_id} doesn't exist")
+            print()
             return
     except google.auth.exceptions.TransportError:
         print("Server not response")
@@ -80,7 +84,9 @@ def get_files_from_google_folder(folder_id:str) -> List[dict] or None:
             return
         else:
             print(f"An error occurred: {err}")
+            print()
             print(f"maybe id:{folder_id} doesn't exist")
+            print()
             return
     except google.auth.exceptions.TransportError:
         print("Server not response")
@@ -128,7 +134,9 @@ def get_files_by_mimetype_google_folder(mimeType:str,folder_id:str) -> None:
             return
         else:
             print(f"An error occurred: {err}")
+            print()
             print(f"maybe id:{folder_id} doesn't exist")
+            print()
             return
     except google.auth.exceptions.TransportError:
         print("Server not response")

@@ -7,6 +7,9 @@ import os
 import datetime
 import requests
 from functools import partial
+from tqdm import tqdm
+import time
+from Validate import *
 
 from concurrent.futures import ThreadPoolExecutor
 
@@ -104,12 +107,25 @@ def split_csv():
         combined_df['Скорость ветра'] = None
 
         # Получаем и добавляем информацию о погоде для каждой строки
-        for index, row in combined_df.iterrows():
-            weather_data = get_weather(row['Время']/1000)
-            combined_df.at[index, 'Погода'] = weather_data['precipitation']
-            combined_df.at[index, 'Температура'] = weather_data['temperature']
-            combined_df.at[index, 'Направление ветра'] = weather_data['wind_direction']
-            combined_df.at[index, 'Скорость ветра'] = weather_data['wind_speed']
+        max_retries = 3  # Maximum number of retry attempts
+        for index, row in tqdm(combined_df.iterrows(), total=combined_df.shape[0]):
+            success = False
+            attempts = 0
+            while not success and attempts < max_retries:
+                try:
+                    weather_data = get_weather(row['Время'] / 1000)
+                    combined_df.at[index, 'Погода'] = weather_data['precipitation']
+                    combined_df.at[index, 'Температура'] = weather_data['temperature']
+                    combined_df.at[index, 'Направление ветра'] = weather_data['wind_direction']
+                    combined_df.at[index, 'Скорость ветра'] = weather_data['wind_speed']
+                    success = True
+                except Exception as e:
+                    attempts += 1
+                    if attempts < max_retries:
+                        print(f"Attempt {attempts} failed. Retrying...")
+                        time.sleep(1)  # Optional: wait for 1 second before retrying
+                    else:
+                        print(f"Failed to get weather data for index {index} after {max_retries} attempts. Error: {e}")
     except ValueError as err:
         print(err)
         return
@@ -123,14 +139,14 @@ def split_csv():
     print(combined_df)
     combined_df.to_csv(upload_folder_path+'data.csv', index=False)
 
-    with open('folders_id.csv', 'r', newline='') as csvfile:
+    with open('upload_folder_id.csv', 'r', newline='') as csvfile:
         csvreader = csv.reader(csvfile)
         next(csvreader)
         for row in csvreader:
             upload_id = row[0]
-
     upload_file(upload_id,'data.csv',upload_folder_path+'data.csv')
 
 #print(get_files_by_mimetype_google_folder('image/jpeg',"1OEon_6lH94B6TupvVeicEwf8cc1vEIfL"))
 download_all_csv(get_ids())
+validate()
 split_csv()
